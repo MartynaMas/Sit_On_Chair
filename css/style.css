@@ -1,1 +1,592 @@
+:root {
+    --green: #24BAA0;
+    --green-dark: #1F8976;
+    --grey: #C2C2C2;
+    --grey-font: #959595;
+}
 
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+/* -------------------------------------------- */
+/* klasy globalne */
+/* -------------------------------------------- */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.main-section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 1055px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 22px;
+    color: #575757;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 6px;
+    border-bottom: 7px solid var(--green);
+    width: 320px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    border:0;
+    display: inline-block;
+    color:#fff;
+    background: var(--green);
+    padding:10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s background;
+}
+
+.btn:hover {
+    background: var(--green-dark);
+}
+
+.row {
+    margin-left:-15px;
+    margin-right:-15px;
+    display: flex;
+}
+
+.row .col-1-3 {
+    padding: 0 15px;
+    width: 33.3333%;
+    margin: 15px;
+}
+/* -------------------------------------------- */
+/* page header */
+/* -------------------------------------------- */
+
+.page-header {
+    height: 40px;
+    background-color: #000;
+    position: relative;
+    z-index: 100000;
+}
+
+.page-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.page-logo {
+    margin:0;
+    display: flex;
+    align-items: center;
+}
+
+.page-logo-link {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.page-logo-link span {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.page-nav {}
+.page-nav-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-nav-list li {
+    position: relative;
+}
+
+.page-nav-list a {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 20px;
+    line-height: 40px;
+    display: block;
+    transition: 0.5s;
+}
+
+.page-nav-list a:hover {
+    color: var(--green);
+}
+
+.page-nav-sublist {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    background: #000;
+    list-style:none;
+    padding:10px;
+    margin:0;
+    transform: translate(-50%, 0);
+    transition:0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.page-nav-list li:hover .page-nav-sublist {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-nav-sublist:after {
+    content:"";
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-bottom-color: #000;
+    display: block;
+    position: absolute;
+    top:-20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.page-nav-sublist:before {
+    content: "";
+    width: 100%;
+    height: 12px;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: -12px;
+
+}
+
+.page-nav-sublist a {
+    text-transform: none;
+    font-weight: normal;
+    line-height: 25px;
+}
+/* -------------------------------------------- */
+/* slider */
+/* -------------------------------------------- */
+
+.main-banner-bg {
+    background: linear-gradient(#fafafa, #ddd);
+}
+
+.banner {
+    height:505px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-prev,
+.banner-next {
+    width: 100px;
+    font-size: 70px;
+    color: var(--green);
+    border:0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.banner-prev:active,
+.banner-next:active {
+    color: #000;
+}
+
+.banner-next {
+    order: 1;
+}
+
+.banner-slides {
+    flex-grow: 1;
+    position: relative;
+    width: 35%;
+    height: 100%;
+}
+
+.banner-slide {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-slide-show {
+    opacity: 1;
+    z-index: 1;
+}
+
+.banner-presentation {
+    text-align: center;
+    padding: 40px;
+    width: 65%;
+}
+
+.banner-title {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.banner-title span {
+    font-weight: bold;
+    color: var(--green);
+}
+
+.banner-row {
+    padding: 10px;
+}
+/* -------------------------------------------- */
+/* news */
+/* -------------------------------------------- */
+
+.main-news {
+}
+
+.main-news .news-left {
+    background-image: url("../images/box1_img.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 230px;
+}
+
+.news-middle {
+    background-image: url("../images/box2_img.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 230px;
+}
+
+.news-right {
+    border: 1px solid var(--grey);
+    color: var(--grey-font);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.news-middle,
+.news-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+.shadow {
+    background: #fff;
+    height: 70px;
+    width: 100%;
+    opacity: 0.5;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    transition: 0.5s;
+    display: none;
+}
+
+.news:hover .shadow {
+    display: flex;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.news-title {
+    padding-bottom: 6px;
+    border-bottom: 7px solid var(--green);
+    width: 160px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.row .col-1-3:nth-of-type(1),
+.row .col-1-3:nth-of-type(2) {
+    padding: 0;
+}
+/* -------------------------------------------- */
+/* prices */
+/* -------------------------------------------- */
+
+.main-prices {
+    background-color: #F1F1F1;
+}
+
+.main-prices .price-left,
+.main-prices .price-middle,
+.main-prices .price-right{
+    height: 500px;
+    border: 2px solid var(--grey);
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+    padding: 0;
+}
+
+.price-left:before,
+.price-middle:before,
+.price-right:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--grey);
+    border-radius: 100%;
+    position: absolute;
+    top: -39px;
+    background: #fff;
+}
+
+.price-left:after,
+.price-middle:after,
+.price-right:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    position: absolute;
+    top: -25px;
+    background: var(--grey);
+}
+
+.price-title {
+    text-transform: uppercase;
+    color: var(--green);
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.price-circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    border: 2px solid var(--grey);
+    background: #fff;
+    color: var(--grey);
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -100px;
+}
+
+.price-circle p:nth-of-type(1) {
+    font-size: 35px;
+}
+
+.price-circle sup {
+    font-size: 25px;
+}
+
+.price-circle p:nth-of-type(2) {
+    font-size: 16px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.main-prices ul {
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 240px;
+}
+
+.main-prices li {
+    font-size: 22px;
+    line-height: 45px;
+    color: #a7a7a7;
+    letter-spacing: 1px;
+}
+
+.price-left li:nth-of-type(1),
+.price-middle li:nth-of-type(2),
+.price-right li:nth-of-type(2n + 1){
+    background: #e4e4e4;
+}
+
+.price-left li:nth-of-type(2),
+.price-middle li:nth-of-type(2n+1),
+.price-right li:nth-of-type(2n){
+    background: #F1F1F1;
+}
+
+.price-button {
+    margin: 20px auto;
+}
+
+.main-prices .price-middle {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.main-prices .price-middle .price-title {
+    color: #fff;
+}
+
+.main-prices .price-middle button {
+    background: #fff;
+    color: var(--green);
+}
+
+.price-middle:before {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.price-middle:after {
+    background: #fff;
+}
+/* -------------------------------------------- */
+/* formularz */
+/* -------------------------------------------- */
+
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-left {
+    width: 635px;
+}
+
+.form-right {
+    width: 345px;
+}
+
+.form-addition {
+    height:200px;
+    background: url(../images/red_chair.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-top:-25px;
+    margin-bottom:30px;
+}
+
+.form-row {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    height: 68px;
+    border: 1px solid var(--green);
+    font-size: 33px;
+    font-weight: 300;
+    width: 100%;
+    padding: 0 10px;
+    outline:none;
+}
+
+.form-control:focus {
+    box-shadow:inset 0 0 0 1px var(--green);
+}
+
+.form-control::placeholder {
+    color: var(--grey-font);
+
+}
+
+textarea.form-control {
+    height:180px;
+    resize: none;
+    padding: 10px;
+}
+
+.form-submit-btn {
+    width:100%;
+    font-size:34px;
+    font-weight: bold;
+    padding:20px;
+}
+
+.checkbox {
+    display: flex;
+    cursor: pointer;
+    margin-bottom:30px;
+}
+
+.checkbox-input {
+    width: 50px;
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid var(--green);
+    flex-shrink: 0;
+    cursor: pointer;
+    outline: none;
+    margin-right: 15px;
+}
+
+.checkbox-input:checked {
+    background-image: url(../images/form_ok.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox-text {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--grey-font);
+}
+/* -------------------------------------------- */
+/* footer*/
+/* -------------------------------------------- */
+
+.page-footer {
+    height: 100px;
+    color: var(--grey-font);
+}
+
+.page-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    width: 635px;
+}
+
+.footer-logo {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.footer-logo span {
+    font-weight: bold;
+}
