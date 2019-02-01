@@ -5,9 +5,218 @@
     <title>SitOnChair</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-logo">
+                <a href="/" class="page-logo-link">
+                    Sit <span>on</span> chair
+                </a>
+            </h1>
 
+            <nav class="page-nav">
+                <ul class="page-nav-list">
+                    <li>
+                        <a href="">O firmie</a>
+
+                        <ul class="page-nav-sublist">
+                            <li><a href="">Aktualności</a></li>
+                            <li><a href="">Nasz team</a></li>
+                            <li><a href="">Historia</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="">Galeria</a></li>
+                    <li><a href="">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-banner-bg">
+        <div class="container">
+            <div class="banner">
+                <button class="banner-prev"> &lt; </button>
+                <button class="banner-next"> &gt; </button>
+
+                <div class="banner-slides">
+                    <div class="banner-slide banner-slide-show">
+                        <img src="./images/black_chair.png" alt="black-chair">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="./images/orange_chair.png" alt="orange-chair">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="./images/red_chair.png" alt="red-chair">
+                    </div>
+                </div>
+
+                <div class="banner-presentation">
+                    <h1 class="banner-title">sit <span>on</span> our <span>chair</span></h1>
+                    <p class="banner-row">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam atque,
+                        autem beatae blanditiis, cupiditate deleniti doloribus dolorum enim ex expedita explicabo fugiat
+                        laborum minus modi nisi sit tempora vero!</p>
+
+                    <div class="banner-row">
+                        <button type="submit" class="btn banner-submit-btn">
+                            zobacz więcej
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-news main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-1-3 news news-left">
+                    <div class="shadow ">
+                        <h3 class="news-title">Chair <span class="uppercase">clair</span></h3>
+                    </div>
+                </div>
+
+                <div class="col-1-3 news news-middle">
+                    <div class="shadow">
+                        <h3 class="news-title">Chair <span class="uppercase">margarita</span></h3>
+                    </div>
+                </div>
+
+                <div class="col-1-3 news-right">
+                    <h3 class="news-title">Finds all inputs</h3>
+                    <p>Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.</p>
+                    <p>Notice there is no change when clicking the checkboxes since no click events have been</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-prices main-section">
+        <div class="container">
+            <h2 class="section-title">
+                Cennik
+            </h2>
+            <div class="row">
+                <div class="col-1-3 price-left">
+                    <h2 class="price-title">basic plan</h2>
+                    <div class="price-circle">
+                        <p>85<sup>99</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                    <ul>
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                    </ul>
+
+                    <button type="submit" class="btn price-button">
+                        dołącz
+                    </button>
+                </div>
+
+                <div class="col-1-3 price-middle">
+                    <h2 class="price-title">standard plan</h2>
+                    <div class="price-circle">
+                        <p>95<sup>99</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                    <ul>
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 5 lat</li>
+                    </ul>
+
+                    <button type="submit" class="btn price-button">
+                        dołącz
+                    </button>
+                </div>
+
+                <div class="col-1-3 price-right">
+                    <h2 class="price-title">advance plan</h2>
+                    <div class="price-circle">
+                        <p>211<sup>00</sup></p>
+                        <p>pln/msc</p>
+                    </div>
+                    <ul>
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 6 lat</li>
+                        <li>Porady projektanta</li>
+                    </ul>
+
+                    <button type="submit" class="btn price-button">
+                        dołącz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-contact main-section">
+        <div class="container">
+            <h2 class="section-title">
+                Kontakt
+            </h2>
+
+            <form class="form">
+                <div class="form-left">
+                    <div class="form-row">
+                        <label for="message" class="visuallyhidden">Imię:</label>
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Imię:">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email" class="visuallyhidden">Email:</label>
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Email:">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message" class="visuallyhidden">Wiadomość:</label>
+                        <textarea class="form-control" name="message" id="message" placeholder="Wiadomość:"></textarea>
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="form-addition"></div>
+
+                    <div class="form-row">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox-input">
+                            <span class="checkbox-text">
+                                    Zgadzam się na przetwarzanie danych osobowych
+                                </span>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit" class="btn form-submit-btn">
+                            Wyślij
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-copyright">
+                Copyright 2014 | All Rights Reserved. - Sit On Chair
+            </div>
+            <div>
+                <a href=""><img src="./images/flickr.png" alt="flickrlogo"></a>
+                <a href=""><img src="./images/vimeo.png" alt="vimeo logo"></a>
+                <a href=""><img src="./images/pinterest.png" alt="pinterest logo"></a>
+                <a href=""><img src="./images/twitter.png" alt="twitter logo"></a>
+            </div>
+            <div>
+                <h2 class="footer-logo">Sit <span>on</span> chair</h2>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
